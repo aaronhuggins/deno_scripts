@@ -30,19 +30,19 @@ const init = new CDir({
 			'deno.suggest.imports.hosts': {
 				'https://deno.land': true,
 			},
-		}),
+		}).json(),
 	}),
-	'deno.json': new CFIle({
-		'fmt': {
-			'options': {
-				'useTabs': true,
-				'lineWidth': 120,
-				'proseWrap': 'always',
-				'indentWidth': 2,
-				'singleQuote': true,
+	'deno.jsonc': new CFIle({
+		fmt: {
+			options: {
+				useTabs: true,
+				lineWidth: 120,
+				proseWrap: 'always',
+				indentWidth: 2,
+				singleQuote: true,
 			},
 		},
-	}),
+	}).jsonc(),
 });
 
 switch (cmd) {
